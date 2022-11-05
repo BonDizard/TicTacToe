@@ -1,27 +1,29 @@
+/*this a ticktactoe game 
+single player in which you play against the computer
+where player is 'X' and the computer is 'O'*/
 package bond;
-
-import java.util.Random;
+import java.util.Random;//for compter we are generating random numbers
 import java.util.Scanner;
 
 public class Practice {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		again( scan);
-		scan.close();
+		again( scan);//shift+alt+m
+		scan.close();//shift+alt+m
 	}
 
 	private static void again( Scanner scan) {
 		char[][] board = { { ' ', ' ', ' ', }, { ' ', ' ', ' ', }, { ' ', ' ', ' ', } };
-		System.out.println("TicTacToe\nWill you like to play?");
-		System.out.println("Press 1 to play.");
+		System.out.println("TicTacToe\nWill you like to play?");//sysout+ctrl+space
+		System.out.println("Press 1 to play.");//sysout+ctrl+space
 		int a = scan.nextInt();
 		if(a==1)
 		{
-			play(scan, board);
+			play(scan, board);//shift+alt+m
 		}
 		else
 		{
-			System.out.println("Thank you,");
+			System.out.println("Thank you,");//sysout+ctrl+space
 		}
 	}
 
@@ -46,13 +48,13 @@ public class Practice {
 
 		while (true) {
 			printBoard(board);
-			System.out.println("Enter your play(1-9)");
+			System.out.println("Enter your play(1-9)");//sysout+ctrl+space
 			userInput = scan.nextLine();
 
 			if (isValidMove(board, userInput)) {
 				break;
 			} else {
-				System.out.println("not a valid move");
+				System.out.println("not a valid move");//sysout+ctrl+space
 			}
 		}
 		placeMove(board, userInput, 'X');
@@ -101,7 +103,7 @@ public class Practice {
 		}
 		if (hasContestantWon(board, 'O')) {		
 			printBoard(board);
-			System.out.println("Woops\ncomputer has won");
+			System.out.println("Woops\ncomputer has won");//sysout+ctrl+space
 			return true;
 		}
 		for (int i = 0; i < board.length; i++) {
@@ -111,7 +113,7 @@ public class Practice {
 				}
 			}
 		}	printBoard(board);
-		System.out.println("game tie");
+		System.out.println("game tie");//sysout+ctrl+space
 		return true;
 	}
 
@@ -172,11 +174,11 @@ public class Practice {
 		}
 	}
 private static void printBoard(char[][] board) {
-		System.out.println(board[0][0] + "|" + board[0][1] + "|" + board[0][2]);
+		System.out.println(board[0][0] + "|" + board[0][1] + "|" + board[0][2]);//sysout+ctrl+space
 		System.out.println("-+-+-");
-		System.out.println(board[1][0] + "|" + board[1][1] + "|" + board[1][2]);
+		System.out.println(board[1][0] + "|" + board[1][1] + "|" + board[1][2]);//sysout+ctrl+space
 		System.out.println("-+-+-");
-		System.out.println(board[2][0] + "|" + board[2][1] + "|" + board[2][2]);
+		System.out.println(board[2][0] + "|" + board[2][1] + "|" + board[2][2]);//sysout+ctrl+space
 	}
 
 }
