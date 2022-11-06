@@ -5,11 +5,11 @@ package bond;
 import java.util.Random;//for compter we are generating random numbers
 import java.util.Scanner;
 
-public class Practice {
+public class TicTacToe {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		again( scan);//shift+alt+m
-		scan.close();//shift+alt+m
+		again( scan);
+		scan.close();
 	}
 
 	private static void again( Scanner scan) {
